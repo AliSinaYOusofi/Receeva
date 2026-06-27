@@ -1,0 +1,149 @@
+@import "tailwindcss";
+
+/* ============================================================
+   Receeva — design tokens ("The Digital Atelier")
+   Pulled verbatim from the app's color system.
+   ============================================================ */
+:root {
+  --primary: #000000;
+  --primary-container: #1a1b20;
+
+  --secondary: #46464b;
+  --secondary-container: #e4e2e1;
+
+  --background: #f8f9fc;
+  --surface: #f8f9fc;
+  --surface-lowest: #ffffff;
+  --surface-low: #f2f4f7;
+  --surface-container: #eceef1;
+  --surface-high: #e6e8eb;
+  --surface-highest: #dde1e6;
+
+  --text: #000000;
+  --text-secondary: #46464b;
+  --text-muted: #6e6e73;
+  --text-inverse: #ffffff;
+
+  --border-ghost: rgba(0, 0, 0, 0.15);
+  --separator: rgba(0, 0, 0, 0.06);
+  --shadow-ambient: rgba(25, 28, 30, 0.06);
+  --glass-bg: rgba(248, 249, 252, 0.7);
+
+  --success: #2d6a4f;
+  --warning: #7d5a00;
+  --error: #ba1a1a;
+}
+
+/* Map tokens to Tailwind v4 theme so utilities like
+   bg-surface-low / text-muted / font-sans resolve. */
+@theme inline {
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-fraunces), ui-serif, Georgia, "Times New Roman",
+    serif;
+
+  --color-primary: var(--primary);
+  --color-primary-container: var(--primary-container);
+  --color-secondary: var(--secondary);
+  --color-secondary-container: var(--secondary-container);
+
+  --color-background: var(--background);
+  --color-surface: var(--surface);
+  --color-surface-lowest: var(--surface-lowest);
+  --color-surface-low: var(--surface-low);
+  --color-surface-container: var(--surface-container);
+  --color-surface-high: var(--surface-high);
+  --color-surface-highest: var(--surface-highest);
+
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-muted: var(--text-muted);
+  --color-inverse: var(--text-inverse);
+
+  --color-success: var(--success);
+  --color-warning: var(--warning);
+  --color-error: var(--error);
+
+  /* Editorial type scale */
+  --text-eyebrow: 0.6875rem;
+  --text-eyebrow--line-height: 1;
+  --text-eyebrow--letter-spacing: 0.12em;
+
+  --radius-card: 1rem;
+}
+
+* {
+  border-color: var(--border-ghost);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--background);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-optical-sizing: auto;
+  /* Common ligatures + contextual alternates for a cleaner body texture. */
+  font-feature-settings: "liga" 1, "calt" 1, "cv11" 1;
+  letter-spacing: -0.011em;
+}
+
+/* Headings break by sense, not by edge; body avoids ugly orphans. */
+h1,
+h2,
+h3 {
+  text-wrap: balance;
+}
+p {
+  text-wrap: pretty;
+}
+
+/* Editorial display face — high-contrast serif, optically sized.
+   Pair with a Tailwind text-size + leading utility at the call site. */
+.font-display {
+  font-family: var(--font-serif);
+  font-optical-sizing: auto;
+  font-weight: 560;
+  font-feature-settings: "liga" 1, "calt" 1;
+  letter-spacing: -0.018em;
+}
+
+/* Tabular figures for any numeric/balance UI (the app's bread and butter). */
+.nums-tabular {
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum" 1;
+}
+
+/* Refined text selection in the brand ink. */
+::selection {
+  background: rgba(0, 0, 0, 0.9);
+  color: var(--text-inverse);
+}
+
+/* Signature radial gradient — the black "soul". */
+.bg-atelier {
+  background: radial-gradient(120% 120% at 30% 0%, #1a1b20 0%, #000000 60%);
+}
+
+/* Glassmorphic sticky nav surface. */
+.glass {
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
+
+/* Extra-diffused ambient shadow (no hard drop shadows). */
+.shadow-ambient {
+  box-shadow: 0 20px 40px var(--shadow-ambient);
+}
+
+/* Scroll-reveal and the hero entrance are handled by framer-motion, which
+   honors prefers-reduced-motion at the component level (useReducedMotion). */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
