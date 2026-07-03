@@ -1,26 +1,29 @@
-import Link from "next/link";
 import type { Metadata } from "next";
+import { getTranslations } from "next-intl/server";
+import { Link } from "@/i18n/navigation";
 
 // Next injects <meta name="robots" content="noindex"> for 404 responses, but
 // being explicit about the title keeps the tab label clean.
-export const metadata: Metadata = {
-  title: "Page not found",
-};
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("notFound");
+  return { title: t("title") };
+}
 
-export default function NotFound() {
+export default async function NotFound() {
+  const t = await getTranslations("notFound");
+
   return (
     <main className="flex min-h-[80vh] flex-col items-center justify-center px-6 text-center">
       <p className="text-eyebrow font-medium uppercase tracking-[0.12em] text-text-muted">
-        Error 404
+        {t("eyebrow")}
       </p>
 
       <h1 className="mt-5 font-serif text-6xl tracking-[-0.02em] text-text sm:text-7xl">
-        Off the ledger.
+        {t("headline")}
       </h1>
 
       <p className="mt-5 max-w-md text-base leading-relaxed text-text-secondary">
-        The page you’re looking for doesn’t exist or has moved. Let’s get you
-        back to a balance you recognise.
+        {t("body")}
       </p>
 
       <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
@@ -28,13 +31,13 @@ export default function NotFound() {
           href="/"
           className="rounded-full bg-primary px-6 py-3 text-sm font-medium text-inverse transition-transform duration-200 hover:-translate-y-0.5"
         >
-          Back to home
+          {t("backHome")}
         </Link>
         <Link
           href="/#features"
           className="rounded-full px-6 py-3 text-sm font-medium text-text-secondary transition-colors hover:text-text"
         >
-          Explore features
+          {t("exploreFeatures")}
         </Link>
       </div>
     </main>

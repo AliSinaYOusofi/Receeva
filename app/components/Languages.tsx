@@ -8,45 +8,48 @@ import IN from "country-flag-icons/react/3x2/IN";
 import IR from "country-flag-icons/react/3x2/IR";
 import SA from "country-flag-icons/react/3x2/SA";
 import AF from "country-flag-icons/react/3x2/AF";
+import { useTranslations } from "next-intl";
 import { Reveal } from "./Reveal";
 import { Eyebrow } from "./ui";
 
 type Flag = typeof GB;
 
-const languages: { name: string; Flag: Flag }[] = [
-  { name: "English", Flag: GB },
-  { name: "Spanish", Flag: ES },
-  { name: "French", Flag: FR },
-  { name: "Portuguese", Flag: PT },
-  { name: "Turkish", Flag: TR },
-  { name: "Urdu", Flag: PK },
-  { name: "Hindi", Flag: IN },
-  { name: "Persian", Flag: IR },
-  { name: "Arabic", Flag: SA },
-  { name: "Pashto", Flag: AF },
+const languages: { key: string; Flag: Flag }[] = [
+  { key: "english", Flag: GB },
+  { key: "spanish", Flag: ES },
+  { key: "french", Flag: FR },
+  { key: "portuguese", Flag: PT },
+  { key: "turkish", Flag: TR },
+  { key: "urdu", Flag: PK },
+  { key: "hindi", Flag: IN },
+  { key: "persian", Flag: IR },
+  { key: "arabic", Flag: SA },
+  { key: "pashto", Flag: AF },
 ];
 
 export function Languages() {
+  const t = useTranslations("languages");
+
   return (
     <section className="bg-surface">
       <div className="mx-auto max-w-4xl px-6 py-24 text-center lg:px-10">
         <Reveal>
-          <Eyebrow className="mx-auto">Speaks your language</Eyebrow>
+          <Eyebrow className="mx-auto">{t("eyebrow")}</Eyebrow>
           <p className="font-display mx-auto mt-5 max-w-2xl text-[clamp(1.5rem,3vw,2rem)] italic leading-snug text-text">
-            Available in ten languages — with full right-to-left support.
+            {t("statement")}
           </p>
         </Reveal>
         <Reveal delay={100} className="mt-9 flex flex-wrap justify-center gap-2.5">
-          {languages.map(({ name, Flag }) => (
+          {languages.map(({ key, Flag }) => (
             <span
-              key={name}
+              key={key}
               className="inline-flex items-center gap-2 rounded-full bg-secondary-container px-3.5 py-1.5 text-sm text-text-secondary"
             >
               <Flag
                 aria-hidden="true"
                 className="h-3.5 w-5 shrink-0 rounded-xs"
               />
-              {name}
+              {t(`names.${key}`)}
             </span>
           ))}
         </Reveal>

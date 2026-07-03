@@ -1,13 +1,11 @@
+import { useTranslations } from "next-intl";
 import { Reveal } from "./Reveal";
 import { Chip, Eyebrow } from "./ui";
 
-const highlights = [
-  "Full right-to-left layout",
-  "Switch instantly, no restart",
-  "Localised numbers & dates",
-];
-
 export function LanguageShowcase() {
+  const t = useTranslations("languageShowcase");
+  const highlights = t.raw("highlights") as string[];
+
   return (
     <section
       id="languages"
@@ -15,12 +13,12 @@ export function LanguageShowcase() {
       aria-labelledby="languages-showcase-heading"
     >
       <div className="mx-auto grid max-w-6xl grid-cols-1 items-center gap-12 px-6 py-24 lg:grid-cols-2 lg:gap-16 lg:px-10 lg:py-32">
-        {/* Screenshot — slides in from the left */}
-        <Reveal variant="left" className="flex justify-center lg:justify-start">
+        {/* Screenshot — slides in from the leading edge */}
+        <Reveal variant="start" className="flex justify-center lg:justify-start">
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
             src="/images/language_selection_modal.png"
-            alt="Receeva language picker showing English, Arabic, Dari, Pashto, Urdu and more"
+            alt={t("imageAlt")}
             width={320}
             height={654}
             loading="lazy"
@@ -30,17 +28,15 @@ export function LanguageShowcase() {
 
         {/* Copy — rises up */}
         <Reveal variant="up" delay={100} className="max-w-md">
-          <Eyebrow>Speaks your language</Eyebrow>
+          <Eyebrow>{t("eyebrow")}</Eyebrow>
           <h2
             id="languages-showcase-heading"
             className="font-display mt-4 text-[clamp(1.875rem,4vw,2.5rem)] leading-[1.06] text-text"
           >
-            Ten languages, right to left.
+            {t("headline")}
           </h2>
           <p className="mt-5 text-[1.0625rem] leading-relaxed text-text-secondary">
-            Pick from ten languages — English, Arabic, Dari, Pashto, Urdu, Hindi,
-            Spanish, French, Portuguese and Turkish. Right-to-left scripts are
-            fully mirrored, so the whole app feels native, not translated.
+            {t("body")}
           </p>
           <div className="mt-7 flex flex-wrap gap-2.5">
             {highlights.map((h) => (

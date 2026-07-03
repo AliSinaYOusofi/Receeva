@@ -1,12 +1,19 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
+import { useLocale, useTranslations } from "next-intl";
 import { Eyebrow, StoreBadges } from "./ui";
+import { isRtl } from "@/i18n/routing";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export function Hero() {
+  const t = useTranslations("hero");
+  const locale = useLocale();
   const reduce = useReducedMotion();
+  // Physical x-axis offsets (framer-motion has no logical-property concept)
+  // must flip sign in RTL, or "slide in from the edge" plays backwards.
+  const dirSign = isRtl(locale) ? -1 : 1;
 
   // Per-element entrance on page load. Each call gets its own direction,
   // delay and duration so the hero assembles itself piece by piece. Under
@@ -19,19 +26,14 @@ export function Hero() {
     reduce
       ? {}
       : {
-          initial: { opacity: 0, ...from },
+          initial: {
+            opacity: 0,
+            ...from,
+            ...(from.x !== undefined ? { x: from.x * dirSign } : {}),
+          },
           animate: { opacity: 1, x: 0, y: 0, scale: 1 },
           transition: { duration, delay, ease: EASE },
         };
-
-  // Floating glass badge gets a springy pop slightly after the phone lands.
-  const floatBadge = reduce
-    ? {}
-    : {
-        initial: { opacity: 0, scale: 0.6, y: -6 },
-        animate: { opacity: 1, scale: 1, y: 0 },
-        transition: { type: "spring" as const, stiffness: 260, damping: 18, delay: 0.85 },
-      };
 
   return (
     <section
@@ -44,7 +46,7 @@ export function Hero() {
         <div className="max-w-xl">
           {/* Eyebrow drops in from above */}
           <motion.div {...load({ y: -12 }, 0.05, 0.6)}>
-            <Eyebrow>Personal Finance · Multi-currency</Eyebrow>
+            <Eyebrow>{t("eyebrow")}</Eyebrow>
           </motion.div>
           {/* Headline rises up, a touch slower */}
           <motion.h1
@@ -52,18 +54,16 @@ export function Hero() {
             id="hero-heading"
             className="font-display mt-5 text-[clamp(2.75rem,6.2vw,4.25rem)] leading-[1.02] text-text"
           >
-            Every person,
+            {t("headlineLine1")}
             <br />
-            every cent.
+            {t("headlineLine2")}
           </motion.h1>
           {/* Paragraph simply fades in */}
           <motion.p
             {...load({}, 0.36)}
             className="mt-6 max-w-md text-[1.0625rem] leading-relaxed text-text-secondary"
           >
-            Track money you send and receive with anyone — in any currency.
-            Live exchange rates resolve it all into one balance. Offline-first,
-            no ads, your data stays yours.
+            {t("body")}
           </motion.p>
           {/* Store badges scale in */}
           <motion.div
@@ -79,32 +79,25 @@ export function Hero() {
               href="#features"
               className="mt-6 inline-flex items-center gap-1.5 text-sm font-medium text-text underline-offset-4 hover:underline"
             >
-              See features
+              {t("seeFeatures")}
               <span aria-hidden="true">↓</span>
             </a>
           </motion.div>
         </div>
 
-        {/* Phone mockup — slides in from the right edge */}
+        {/* Phone mockup — slides in from the trailing edge */}
         <motion.div
           {...load({ x: 64 }, 0.25, 0.9)}
           className="relative flex justify-center lg:justify-end"
         >
           <div className="relative">
-            {/* floating glass currency badge */}
-            {/* <motion.div
-              {...floatBadge}
-              className="glass shadow-ambient absolute -left-4 top-12 z-10 rounded-full px-4 py-2 text-sm font-medium text-text sm:-left-8"
-            >
-              150+ currencies
-            </motion.div> */}
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
               src="/images/summart_of_all_customers_transactions.png"
-              alt="Receeva Ledger screen showing contacts with multi-currency net balances"
+              alt={t("phoneAlt")}
               width={320}
               height={654}
-              className="relative w-[260px] sm:w-[300px] lg:w-[340px] lg:translate-x-8"
+              className="relative w-[260px] sm:w-[300px] lg:w-[340px] lg:translate-x-8 rtl:lg:-translate-x-8"
               fetchPriority="high"
             />
           </div>
