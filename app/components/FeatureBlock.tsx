@@ -33,7 +33,7 @@ export function FeatureBlock({
       <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2 lg:gap-16">
         {/* Mockup — slides in from whichever side it sits on */}
         <Reveal
-          variant={imageFirst ? "left" : "right"}
+          variant={imageFirst ? "start" : "end"}
           className={`flex justify-center ${
             imageFirst ? "lg:order-1" : "lg:order-2"
           }`}

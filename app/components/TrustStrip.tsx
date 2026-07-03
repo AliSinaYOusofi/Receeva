@@ -1,13 +1,10 @@
+import { useTranslations } from "next-intl";
 import { Reveal } from "./Reveal";
 
-const items = [
-  "Offline-first",
-  "10 languages",
-  "No ads",
-  "Your data, your device",
-];
-
 export function TrustStrip() {
+  const t = useTranslations("trustStrip");
+  const items = t.raw("items") as string[];
+
   return (
     <section aria-label="At a glance" className="bg-surface-low">
       <Reveal variant="fade" className="mx-auto max-w-6xl px-6 py-7 lg:px-10">

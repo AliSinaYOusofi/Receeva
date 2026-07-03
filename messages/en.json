@@ -1,0 +1,182 @@
+{
+  "metadata": {
+    "titleDefault": "Receeva — Track money with anyone, in any currency",
+    "titleTemplate": "%s · Receeva",
+    "description": "Receeva is an offline-first, multi-currency personal finance & ledger app. Track money sent and received with anyone, see net balances, and convert with live rates. iOS & Android. No ads.",
+    "keywords": ["Receeva", "Receeva app", "personal finance", "ledger app", "multi-currency", "send and receive money", "offline-first", "money tracker"]
+  },
+  "nav": {
+    "home": "Receeva home",
+    "features": "Features",
+    "currencies": "Currencies",
+    "privacy": "Privacy",
+    "faq": "FAQ",
+    "download": "Download",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "language": "Language",
+    "theme": "Theme",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System"
+  },
+  "hero": {
+    "eyebrow": "Personal Finance · Multi-currency",
+    "headlineLine1": "Every person,",
+    "headlineLine2": "every cent.",
+    "body": "Track money you send and receive with anyone — in any currency. Live exchange rates resolve it all into one balance. Offline-first, no ads, your data stays yours.",
+    "seeFeatures": "See features",
+    "phoneAlt": "Receeva Ledger screen showing contacts with multi-currency net balances"
+  },
+  "trustStrip": {
+    "items": ["Offline-first", "10 languages", "No ads", "Your data, your device"]
+  },
+  "features": {
+    "contacts": {
+      "eyebrow": "01 — Contacts & Ledgers",
+      "headline": "Every person, every cent.",
+      "body": "Add a contact — or pull one from your phone book — and record unlimited transactions against them, each in any currency. Split costs, track debts, and settle balances. Currency cards show the net per currency: total received minus total sent.",
+      "chips": ["Sent / Received", "Net balances", "Per-currency cards", "Contact import"],
+      "imageAlt": "Receeva customer detail screen with per-currency net balance cards"
+    },
+    "currencies": {
+      "eyebrow": "02 — Currency Conversion",
+      "headline": "One world, one balance.",
+      "body": "USD, EUR, GBP, JPY — every transaction keeps its own currency, then resolves to your home currency in real time with live exchange rates. A built-in converter unifies any set of transactions into a single currency for a clean, consolidated view.",
+      "chips": ["Live exchange rates", "Set a default currency", "Manual rate fallback", "One unified view"],
+      "imageAlt": "Receeva transaction entry screen recording an amount in a selected currency wallet"
+    },
+    "insights": {
+      "eyebrow": "03 — Insights & Trends",
+      "headline": "See where it flows.",
+      "body": "Visualise transaction flow — sent vs received — across the last 6 months, by weekday, by currency, and by top contacts. Spot patterns without spreadsheets.",
+      "chips": ["6-month trends", "Activity by weekday", "By currency", "Top customers"],
+      "imageAlt": "Receeva statistics screen with a per-currency sent versus received breakdown"
+    }
+  },
+  "featureGrid": {
+    "eyebrow": "Everything else",
+    "headline": "A complete ledger in your pocket.",
+    "items": {
+      "export": { "title": "Export & Reports", "copy": "Export any contact or month to CSV/Excel — sent, received, net balances." },
+      "sync": { "title": "Cloud Sync", "copy": "Optional sync keeps local and cloud in step. Works fully offline without it." },
+      "widgets": { "title": "Home-Screen Widgets", "copy": "Top balances, recent transactions, and cash flow — right on your home screen." },
+      "guest": { "title": "Guest / Offline Mode", "copy": "Start instantly, no account needed. Your data lives on your device." },
+      "theme": { "title": "Light & Dark", "copy": "A consistent design system in both themes. Personalise your defaults." },
+      "currencyCount": { "title": "150+ Currencies", "copy": "Track money in over 150 currencies. Live exchange rates resolve it all into one balance." }
+    }
+  },
+  "privacySection": {
+    "eyebrow": "Privacy by default",
+    "headline": "Your money. Your device.",
+    "body": "Receeva is offline-first. Use it entirely on-device in guest mode, or opt into encrypted cloud sync when you want it. No ads. No data selling. Sign in with Apple only if you choose to.",
+    "chips": ["Offline-first", "Sign in with Apple", "Encrypted sync", "No ads"]
+  },
+  "languageShowcase": {
+    "eyebrow": "Speaks your language",
+    "headline": "Ten languages, right to left.",
+    "body": "Pick from ten languages — English, Arabic, Dari, Pashto, Urdu, Hindi, Spanish, French, Portuguese and Turkish. Right-to-left scripts are fully mirrored, so the whole app feels native, not translated.",
+    "highlights": ["Full right-to-left layout", "Switch instantly, no restart", "Localised numbers & dates"],
+    "imageAlt": "Receeva language picker showing English, Arabic, Dari, Pashto, Urdu and more"
+  },
+  "languages": {
+    "eyebrow": "Speaks your language",
+    "statement": "Available in ten languages — with full right-to-left support.",
+    "names": {
+      "english": "English",
+      "spanish": "Spanish",
+      "french": "French",
+      "portuguese": "Portuguese",
+      "turkish": "Turkish",
+      "urdu": "Urdu",
+      "hindi": "Hindi",
+      "persian": "Persian",
+      "arabic": "Arabic",
+      "pashto": "Pashto"
+    }
+  },
+  "faq": {
+    "eyebrow": "Questions",
+    "headline": "Good to know.",
+    "items": {
+      "addCustomer": { "q": "How do I add a customer?", "a": "Tap + on the Ledger tab. Create one manually or pick from your phone contacts; avatars fill in automatically." },
+      "recordTransaction": { "q": "How do I record a transaction?", "a": "Open a customer, tap Record, choose Sent or Received, enter the amount, pick a currency, add an optional note." },
+      "currencyCards": { "q": "What do the currency cards show?", "a": "Each card shows the net balance for one currency (received − sent). Swipe to cycle currencies." },
+      "multipleCurrencies": { "q": "Can I use multiple currencies?", "a": "Yes. Each transaction has its own currency; set a default in Settings so new entries pre-fill." },
+      "exportData": { "q": "Can I export my data?", "a": "Yes. Export all customers or a single contact to Excel/CSV from the Ledger tab." },
+      "needAccount": { "q": "Do I need an account?", "a": "No. Guest mode is fully offline. Cloud sync and sign-in are optional." }
+    }
+  },
+  "finalCta": {
+    "headline": "Start keeping the record.",
+    "body": "Free to download. Offline-first. No ads."
+  },
+  "storeBadges": {
+    "appStoreAlt": "Download on the App Store",
+    "appStoreAria": "Download on the App Store (placeholder link)",
+    "googlePlayAria": "Get it on Google Play — coming soon",
+    "comingSoon": "Coming soon"
+  },
+  "footer": {
+    "tagline": "Crafted for the minimalist curator.",
+    "columns": {
+      "product": { "title": "Product", "features": "Features", "download": "Download" },
+      "support": { "title": "Support", "faq": "FAQ", "help": "Help", "contact": "Contact" },
+      "legal": { "title": "Legal", "privacy": "Privacy Policy", "terms": "Terms" }
+    },
+    "copyright": "© {year} Receeva. All rights reserved."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "eyebrow": "Error 404",
+    "headline": "Off the ledger.",
+    "body": "The page you’re looking for doesn’t exist or has moved. Let’s get you back to a balance you recognise.",
+    "backHome": "Back to home",
+    "exploreFeatures": "Explore features"
+  },
+  "error": {
+    "eyebrow": "Something went wrong",
+    "headline": "Numbers didn’t add up.",
+    "body": "An unexpected error interrupted this page. You can try again, or head back home.",
+    "tryAgain": "Try again",
+    "backHome": "Back to home"
+  },
+  "privacyPage": {
+    "title": "Privacy Policy",
+    "description": "How the Receeva app collects, uses, stores, and protects your data. No tracking, no ads, no data selling.",
+    "eyebrow": "Legal",
+    "heading": "Privacy Policy",
+    "effectiveAsOf": "Effective as of",
+    "intro": "This privacy policy applies to the Receeva app (hereby referred to as “Application”) for mobile devices, created by Habibullah Yousofi (hereby referred to as “Service Provider”) as a free service.",
+    "collectHeading": "What We Collect",
+    "collectIntro": "The Application collects only the information you actively provide:",
+    "collectContactLabel": "Contact information",
+    "collectContactBody": "— name, phone number, and email address (used to create and manage your account)",
+    "collectFinancialLabel": "Financial entries",
+    "collectFinancialBody": "— expenses, budgets, recurring payments, and transaction records that you enter manually",
+    "collectNone": "We do not collect your location, device identifiers, browsing behaviour, or any other passive data.",
+    "useHeading": "How We Use Your Data",
+    "useIntro": "Your data is used exclusively to provide the Application’s core functionality:",
+    "useSync": "Storing and syncing your financial entries across your devices when you choose to sync",
+    "useAccount": "Associating your data with your account so you can recover it if needed",
+    "useNone": "We do not use your data for advertising, analytics, profiling, or any purpose beyond operating the Application.",
+    "trackingHeading": "No Tracking. No Ads.",
+    "trackingBody": "Receeva does not track you. There are no advertising SDKs, no behavioural analytics, and no third-party data brokers involved. Your financial data is yours — we have no interest in monetising it.",
+    "sharingHeading": "Third-Party Sharing",
+    "sharingIntro": "We do not sell, rent, or share your personal information with third parties for their own purposes.",
+    "sharingExpo": "The Application uses Expo as a development platform. Expo may process minimal technical data (such as crash reports) under its own privacy policy:",
+    "sharingLegal": "We may disclose information only if required by law (e.g. a valid legal order), and solely to the extent required.",
+    "storageHeading": "Data Storage & Security",
+    "storageBody": "Your data is stored on your device first. If you create an account and choose to sync, your data is stored securely on our servers and tied to your account. We apply appropriate technical and organisational safeguards to protect it.",
+    "storageDeletionPre": "You can request deletion of all your account data at any time by contacting us at",
+    "storageDeletionPost": ". We will action your request promptly.",
+    "retentionHeading": "Data Retention",
+    "retentionBody": "We retain your data for as long as your account is active. If you delete your account, all associated data is permanently removed from our servers.",
+    "childrenHeading": "Children",
+    "childrenBody": "The Application is not directed at children under 13. We do not knowingly collect information from anyone under 13. If you believe a child has provided us with personal data, please contact us and we will delete it immediately.",
+    "changesHeading": "Changes to This Policy",
+    "changesBody": "We may update this policy from time to time. Any changes will be posted on this page with an updated effective date. Continued use of the Application after changes constitutes acceptance of the updated policy.",
+    "contactHeading": "Contact Us",
+    "contactPre": "Questions about this privacy policy? Reach us at"
+  }
+}

@@ -34,12 +34,47 @@
   --error: #ba1a1a;
 }
 
+/* Dark variant of the token set above — toggled via next-themes' `.dark`
+   class on <html>. Inverts the "atelier" ink so black/white swap roles. */
+.dark {
+  --primary: #ffffff;
+  --primary-container: #e4e2e1;
+
+  --secondary: #c7c6cb;
+  --secondary-container: #2c2d33;
+
+  --background: #101114;
+  --surface: #101114;
+  --surface-lowest: #08090b;
+  --surface-low: #17181c;
+  --surface-container: #1e2024;
+  --surface-high: #26282d;
+  --surface-highest: #2f3136;
+
+  --text: #ffffff;
+  --text-secondary: #c7c6cb;
+  --text-muted: #8b8b90;
+  --text-inverse: #000000;
+
+  --border-ghost: rgba(255, 255, 255, 0.15);
+  --separator: rgba(255, 255, 255, 0.08);
+  --shadow-ambient: rgba(0, 0, 0, 0.4);
+  --glass-bg: rgba(16, 17, 20, 0.7);
+
+  --success: #6fcf97;
+  --warning: #f2c94c;
+  --error: #ff6b6b;
+}
+
 /* Map tokens to Tailwind v4 theme so utilities like
    bg-surface-low / text-muted / font-sans resolve. */
 @theme inline {
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-fraunces), ui-serif, Georgia, "Times New Roman",
     serif;
+  --font-arabic: var(--font-noto-sans-arabic), ui-sans-serif, sans-serif;
+  --font-nastaliq: var(--font-noto-nastaliq-urdu), ui-serif, serif;
+  --font-amiri: var(--font-amiri-serif), ui-serif, serif;
 
   --color-primary: var(--primary);
   --color-primary-container: var(--primary-container);
@@ -77,6 +112,11 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
+}
+
+html.dark {
+  color-scheme: dark;
 }
 
 body {
@@ -146,4 +186,49 @@ p {
   html {
     scroll-behavior: auto;
   }
+}
+
+/* ============================================================
+   Localization — per-script fonts and RTL typography.
+
+   `--font-sans` / `--font-serif` are custom properties, so redeclaring them
+   per `[lang]` cascades into every Tailwind utility that already
+   references them (font-sans, .font-display) — no per-component overrides
+   needed.
+   ============================================================ */
+html[lang="ar"] {
+  --font-sans: var(--font-arabic);
+  --font-serif: var(--font-amiri);
+}
+
+/* Urdu is conventionally set in Nastaliq for both display and body copy —
+   unlike Naskh-style Arabic, it is not a compact UI face: letterforms stack
+   diagonally, so it needs materially more line-height and a larger type
+   size to stay legible, especially at small sizes. */
+html[lang="ur"] {
+  --font-sans: var(--font-nastaliq);
+  --font-serif: var(--font-nastaliq);
+}
+html[lang="ur"] body {
+  font-size: 1.0625em;
+  line-height: 2;
+}
+html[lang="ur"] .font-display {
+  line-height: 1.7;
+}
+
+/* Latin letter-spacing (tight tracking on headlines, loose tracking on
+   uppercase eyebrows) is tuned for Latin glyph shapes and actively breaks
+   Arabic/Urdu glyph joining when applied to cursive scripts. Unlayered
+   rules win over Tailwind's `@layer utilities` regardless of source order
+   or specificity, so this safely overrides every `tracking-*` utility
+   without needing `!important`. */
+[dir="rtl"] * {
+  letter-spacing: normal;
+}
+
+/* Browsers fake missing italics by obliquing the glyphs, which distorts
+   Arabic-script letterforms (Nastaliq has no italic concept at all). */
+[dir="rtl"] .italic {
+  font-style: normal;
 }

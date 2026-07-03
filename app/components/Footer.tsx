@@ -1,29 +1,34 @@
-const columns = [
-  {
-    title: "Product",
-    links: [
-      { label: "Features", href: "#features" },
-      { label: "Download", href: "#download" },
-    ],
-  },
-  {
-    title: "Support",
-    links: [
-      { label: "FAQ", href: "#faq" },
-      { label: "Help", href: "#" },
-      { label: "Contact", href: "#" },
-    ],
-  },
-  {
-    title: "Legal",
-    links: [
-      { label: "Privacy Policy", href: "/privacy" },
-      { label: "Terms", href: "#" },
-    ],
-  },
-];
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 
 export function Footer() {
+  const t = useTranslations("footer");
+
+  const columns = [
+    {
+      title: t("columns.product.title"),
+      links: [
+        { label: t("columns.product.features"), href: "/#features" },
+        { label: t("columns.product.download"), href: "/#download" },
+      ],
+    },
+    {
+      title: t("columns.support.title"),
+      links: [
+        { label: t("columns.support.faq"), href: "/#faq" },
+        { label: t("columns.support.help"), href: "#" },
+        { label: t("columns.support.contact"), href: "#" },
+      ],
+    },
+    {
+      title: t("columns.legal.title"),
+      links: [
+        { label: t("columns.legal.privacy"), href: "/privacy" },
+        { label: t("columns.legal.terms"), href: "#" },
+      ],
+    },
+  ];
+
   return (
     <footer className="bg-surface-low">
       <div className="mx-auto max-w-6xl px-6 py-16 lg:px-10">
@@ -44,7 +49,7 @@ export function Footer() {
               </span>
             </div>
             <p className="mt-4 max-w-[16rem] text-sm leading-relaxed text-text-muted">
-              Crafted for the minimalist curator.
+              {t("tagline")}
             </p>
           </div>
 
@@ -56,12 +61,12 @@ export function Footer() {
               <ul className="mt-4 flex flex-col gap-3">
                 {col.links.map((l) => (
                   <li key={l.label}>
-                    <a
+                    <Link
                       href={l.href}
                       className="text-sm text-text-secondary transition-colors hover:text-text"
                     >
                       {l.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -70,7 +75,7 @@ export function Footer() {
         </div>
 
         <p className="mt-14 text-sm text-text-muted">
-          © 2026 Receeva. All rights reserved.
+          {t("copyright", { year: new Date().getFullYear() })}
         </p>
       </div>
     </footer>

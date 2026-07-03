@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import { useTranslations } from "next-intl";
 
 /** Tiny uppercase editorial eyebrow label. */
 export function Eyebrow({
@@ -40,17 +41,19 @@ export function Chip({
 
 /** App Store + Google Play placeholder badges. */
 export function StoreBadges({ className = "" }: { className?: string }) {
+  const t = useTranslations("storeBadges");
+
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>
       <a
         href="#"
-        aria-label="Download on the App Store (placeholder link)"
+        aria-label={t("appStoreAria")}
         className="inline-block rounded-xl transition-transform duration-200 hover:-translate-y-0.5 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-current"
       >
         {/* eslint-disable-next-line @next/next/no-img-element */}
         <img
           src="/assets/badge-appstore-placeholder.svg"
-          alt="Download on the App Store"
+          alt={t("appStoreAlt")}
           width={170}
           height={56}
         />
@@ -58,7 +61,7 @@ export function StoreBadges({ className = "" }: { className?: string }) {
       <div className="relative inline-block">
         <span
           role="img"
-          aria-label="Get it on Google Play — coming soon"
+          aria-label={t("googlePlayAria")}
           className="inline-block cursor-default rounded-xl opacity-60 select-none"
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -69,8 +72,8 @@ export function StoreBadges({ className = "" }: { className?: string }) {
             height={56}
           />
         </span>
-        <span className="pointer-events-none absolute -top-2 -right-2 rounded-full bg-surface-lowest px-2.5 py-1 text-[0.625rem] font-semibold tracking-[0.08em] text-text uppercase shadow-ambient ring-1 ring-(--separator)">
-          Coming soon
+        <span className="pointer-events-none absolute -inset-e-2 -top-2 rounded-full bg-surface-lowest px-2.5 py-1 text-[0.625rem] font-semibold tracking-[0.08em] text-text uppercase shadow-ambient ring-1 ring-(--separator)">
+          {t("comingSoon")}
         </span>
       </div>
     </div>
