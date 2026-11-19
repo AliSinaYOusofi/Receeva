@@ -1,12 +1,12 @@
 {
   "metadata": {
-    "titleDefault": "Receeva — Track money with anyone, in any currency",
-    "titleTemplate": "%s · Receeva",
-    "description": "Receeva is an offline-first, multi-currency personal finance & ledger app. Track money sent and received with anyone, see net balances, and convert with live rates. iOS & Android. No ads.",
-    "keywords": ["Receeva", "Receeva app", "personal finance", "ledger app", "multi-currency", "send and receive money", "offline-first", "money tracker"]
+    "titleDefault": "LedgerBest — Track money with anyone, in any currency",
+    "titleTemplate": "%s · LedgerBest",
+    "description": "LedgerBest is an offline-first, multi-currency personal finance & ledger app. Track money sent and received with anyone, see net balances, and convert with live rates. iOS & Android. No ads.",
+    "keywords": ["LedgerBest", "LedgerBest app", "personal finance", "ledger app", "multi-currency", "send and receive money", "offline-first", "money tracker"]
   },
   "nav": {
-    "home": "Receeva home",
+    "home": "LedgerBest home",
     "features": "Features",
     "currencies": "Currencies",
     "privacy": "Privacy",
@@ -26,7 +26,7 @@
     "headlineLine2": "every cent.",
     "body": "Track money you send and receive with anyone — in any currency. Live exchange rates resolve it all into one balance. Offline-first, no ads, your data stays yours.",
     "seeFeatures": "See features",
-    "phoneAlt": "Receeva Ledger screen showing contacts with multi-currency net balances"
+    "phoneAlt": "LedgerBest Ledger screen showing contacts with multi-currency net balances"
   },
   "trustStrip": {
     "items": ["Offline-first", "10 languages", "No ads", "Your data, your device"]
@@ -37,21 +37,21 @@
       "headline": "Every person, every cent.",
       "body": "Add a contact — or pull one from your phone book — and record unlimited transactions against them, each in any currency. Split costs, track debts, and settle balances. Currency cards show the net per currency: total received minus total sent.",
       "chips": ["Sent / Received", "Net balances", "Per-currency cards", "Contact import"],
-      "imageAlt": "Receeva customer detail screen with per-currency net balance cards"
+      "imageAlt": "LedgerBest customer detail screen with per-currency net balance cards"
     },
     "currencies": {
       "eyebrow": "02 — Currency Conversion",
       "headline": "One world, one balance.",
       "body": "USD, EUR, GBP, JPY — every transaction keeps its own currency, then resolves to your home currency in real time with live exchange rates. A built-in converter unifies any set of transactions into a single currency for a clean, consolidated view.",
       "chips": ["Live exchange rates", "Set a default currency", "Manual rate fallback", "One unified view"],
-      "imageAlt": "Receeva transaction entry screen recording an amount in a selected currency wallet"
+      "imageAlt": "LedgerBest transaction entry screen recording an amount in a selected currency wallet"
     },
     "insights": {
       "eyebrow": "03 — Insights & Trends",
       "headline": "See where it flows.",
       "body": "Visualise transaction flow — sent vs received — across the last 6 months, by weekday, by currency, and by top contacts. Spot patterns without spreadsheets.",
       "chips": ["6-month trends", "Activity by weekday", "By currency", "Top customers"],
-      "imageAlt": "Receeva statistics screen with a per-currency sent versus received breakdown"
+      "imageAlt": "LedgerBest statistics screen with a per-currency sent versus received breakdown"
     }
   },
   "featureGrid": {
@@ -69,7 +69,7 @@
   "privacySection": {
     "eyebrow": "Privacy by default",
     "headline": "Your money. Your device.",
-    "body": "Receeva is offline-first. Use it entirely on-device in guest mode, or opt into encrypted cloud sync when you want it. No ads. No data selling. Sign in with Apple only if you choose to.",
+    "body": "LedgerBest is offline-first. Use it entirely on-device in guest mode, or opt into encrypted cloud sync when you want it. No ads. No data selling. Sign in with Apple only if you choose to.",
     "chips": ["Offline-first", "Sign in with Apple", "Encrypted sync", "No ads"]
   },
   "languageShowcase": {
@@ -77,7 +77,7 @@
     "headline": "Ten languages, right to left.",
     "body": "Pick from ten languages — English, Arabic, Dari, Pashto, Urdu, Hindi, Spanish, French, Portuguese and Turkish. Right-to-left scripts are fully mirrored, so the whole app feels native, not translated.",
     "highlights": ["Full right-to-left layout", "Switch instantly, no restart", "Localised numbers & dates"],
-    "imageAlt": "Receeva language picker showing English, Arabic, Dari, Pashto, Urdu and more"
+    "imageAlt": "LedgerBest language picker showing English, Arabic, Dari, Pashto, Urdu and more"
   },
   "languages": {
     "eyebrow": "Speaks your language",
@@ -124,7 +124,7 @@
       "support": { "title": "Support", "faq": "FAQ", "help": "Help", "contact": "Contact" },
       "legal": { "title": "Legal", "privacy": "Privacy Policy", "terms": "Terms" }
     },
-    "copyright": "© {year} Receeva. All rights reserved."
+    "copyright": "© {year} LedgerBest. All rights reserved."
   },
   "notFound": {
     "title": "Page not found",
@@ -143,11 +143,11 @@
   },
   "privacyPage": {
     "title": "Privacy Policy",
-    "description": "How the Receeva app collects, uses, stores, and protects your data. No tracking, no ads, no data selling.",
+    "description": "How the LedgerBest app collects, uses, stores, and protects your data. No tracking, no ads, no data selling.",
     "eyebrow": "Legal",
     "heading": "Privacy Policy",
     "effectiveAsOf": "Effective as of",
-    "intro": "This privacy policy applies to the Receeva app (hereby referred to as “Application”) for mobile devices, created by Habibullah Yousofi (hereby referred to as “Service Provider”) as a free service.",
+    "intro": "This privacy policy applies to the LedgerBest app (hereby referred to as “Application”) for mobile devices, created by Habibullah Yousofi (hereby referred to as “Service Provider”) as a free service.",
     "collectHeading": "What We Collect",
     "collectIntro": "The Application collects only the information you actively provide:",
     "collectContactLabel": "Contact information",
@@ -161,7 +161,7 @@
     "useAccount": "Associating your data with your account so you can recover it if needed",
     "useNone": "We do not use your data for advertising, analytics, profiling, or any purpose beyond operating the Application.",
     "trackingHeading": "No Tracking. No Ads.",
-    "trackingBody": "Receeva does not track you. There are no advertising SDKs, no behavioural analytics, and no third-party data brokers involved. Your financial data is yours — we have no interest in monetising it.",
+    "trackingBody": "LedgerBest does not track you. There are no advertising SDKs, no behavioural analytics, and no third-party data brokers involved. Your financial data is yours — we have no interest in monetising it.",
     "sharingHeading": "Third-Party Sharing",
     "sharingIntro": "We do not sell, rent, or share your personal information with third parties for their own purposes.",
     "sharingExpo": "The Application uses Expo as a development platform. Expo may process minimal technical data (such as crash reports) under its own privacy policy:",

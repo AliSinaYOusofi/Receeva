@@ -77,13 +77,13 @@ export async function generateMetadata({
   };
 
   return {
-    metadataBase: new URL("https://receeva.app"),
+    metadataBase: new URL("https://ledgerbest.app"),
     title: {
       default: t("titleDefault"),
       template: t("titleTemplate"),
     },
     description,
-    applicationName: "Receeva",
+    applicationName: "LedgerBest",
     // Canonical + hreflang alternates — tells search engines these are the
     // same page in different languages, not duplicate content.
     alternates: {
@@ -106,7 +106,7 @@ export async function generateMetadata({
       title: t("titleDefault"),
       description,
       url: `/${locale}`,
-      siteName: "Receeva",
+      siteName: "LedgerBest",
       type: "website",
       locale: ogLocales[locale],
       alternateLocale: routing.locales

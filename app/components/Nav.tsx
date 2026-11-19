@@ -119,7 +119,7 @@ export function Nav() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src="/images/logo.png"
+              src="/images/LedgerBest-iOS-Icon-1024.png"
               alt=""
               width={28}
               height={28}
@@ -127,7 +127,7 @@ export function Nav() {
               aria-hidden="true"
             />
             <span className="text-lg font-semibold tracking-[-0.02em] text-text">
-              Receeva
+              LedgerBest
             </span>
           </Link>
 

@@ -2,7 +2,7 @@
 //
 //   node scripts/generate-favicon.mjs
 //
-// Outputs (all derived from public/images/logo.png):
+// Outputs (all derived from the LedgerBest app icon):
 //   app/favicon.ico   — multi-resolution .ico (16/32/48) for browser tabs.
 //   app/icon.png      — 512px PNG; Next emits <link rel="icon"> automatically.
 //   app/apple-icon.png — 180px PNG for the iOS home-screen icon.
@@ -18,7 +18,7 @@ import { fileURLToPath } from "node:url";
 import { dirname, resolve } from "node:path";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const SOURCE = resolve(root, "public/images/logo.png");
+const SOURCE = resolve(root, "public/images/LedgerBest-iOS-Icon-1024.png");
 
 const ICO_SIZES = [16, 32, 48];
 

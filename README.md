@@ -1,13 +1,13 @@
 <p align="center">
-  <img src="public/images/logo.png" alt="Receeva logo" width="96" />
+  <img src="public/images/LedgerBest-iOS-Icon-1024.png" alt="LedgerBest logo" width="96" />
 </p>
 
-<h1 align="center">Receeva</h1>
+<h1 align="center">LedgerBest</h1>
 
 <p align="center"><em>Every person, every cent — across every currency.</em></p>
 
 <p align="center">
-  <a href="https://receeva.vercel.app/en"><strong>🌐 Visit the website</strong></a>
+  <a href="https://ledgerbest.vercel.app/en"><strong>🌐 Visit the website</strong></a>
   ·
   <a href="#download">📱 Download</a>
   ·
@@ -16,9 +16,9 @@
 
 ---
 
-**Receeva** is a privacy-first, multi-currency **personal finance & ledger app** for iOS and Android. It's built for people who lend, borrow, split, and track money with other people across currencies — freelancers, small shop owners, travelers, families, and anyone who keeps a running tab with friends or customers.
+**LedgerBest** is a privacy-first, multi-currency **personal finance & ledger app** for iOS and Android. It's built for people who lend, borrow, split, and track money with other people across currencies — freelancers, small shop owners, travelers, families, and anyone who keeps a running tab with friends or customers.
 
-This repository contains the **marketing landing page**, built with Next.js and deployed at **[receeva.vercel.app](https://receeva.vercel.app/en)**.
+This repository contains the **marketing landing page**, built with Next.js and deployed at **[ledgerbest.vercel.app](https://ledgerbest.vercel.app/en)**.
 
 ## Download
 
@@ -57,11 +57,11 @@ Visualise transaction flow — sent vs received — across the last 6 months, by
 
 ## Privacy by default
 
-Receeva is **offline-first**. Use it entirely on-device in guest mode, or opt into encrypted cloud sync when you want it. **No ads. No data selling.** Sign in with Apple or Google only if you choose to.
+LedgerBest is **offline-first**. Use it entirely on-device in guest mode, or opt into encrypted cloud sync when you want it. **No ads. No data selling.** Sign in with Apple or Google only if you choose to.
 
 ## The landing page (this repo)
 
-A localized, theme-aware marketing site for Receeva:
+A localized, theme-aware marketing site for LedgerBest:
 
 - **Next.js (App Router) + TypeScript** with Tailwind CSS v4
 - **Internationalized** with `next-intl` — English, Urdu (اردو), and Arabic (العربية), including full RTL layouts

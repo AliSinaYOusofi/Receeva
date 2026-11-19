@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 
 // Route segment config + image metadata
-export const alt = "Receeva — Track money with anyone, in any currency";
+export const alt = "LedgerBest — Track money with anyone, in any currency";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -34,7 +34,7 @@ export default function Image() {
             color: "#9ca3af",
           }}
         >
-          Receeva
+          LedgerBest
         </div>
         <div
           style={{
