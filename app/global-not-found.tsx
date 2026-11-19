@@ -5,7 +5,7 @@ import "./globals.css";
 // segment), bypassing the [locale] layout entirely — so it must bring its
 // own <html>/<body> and can't rely on next-intl's request-scoped context.
 export const metadata: Metadata = {
-  metadataBase: new URL("https://receeva.app"),
+  metadataBase: new URL("https://ledgerbest.app"),
   title: "Page not found",
 };
 

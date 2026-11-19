@@ -1,13 +1,13 @@
-# Receeva — Landing Page Build Spec
+# LedgerBest — Landing Page Build Spec
 
-> A complete, self-contained brief for building the **Receeva** marketing landing page.
+> A complete, self-contained brief for building the **LedgerBest** marketing landing page.
 > Hand this file to Claude Code (or any builder). Every asset referenced is a **placeholder** — swap real images/logos later.
 
 ---
 
-## 0. What Receeva Is
+## 0. What LedgerBest Is
 
-**Receeva** is a privacy-first, multi-currency **personal finance & ledger app** for iOS and Android. It is built for people who lend, borrow, split, and track money with other people across currencies — freelancers, small shop owners, travelers, families, and anyone who keeps a running tab with friends or customers.
+**LedgerBest** is a privacy-first, multi-currency **personal finance & ledger app** for iOS and Android. It is built for people who lend, borrow, split, and track money with other people across currencies — freelancers, small shop owners, travelers, families, and anyone who keeps a running tab with friends or customers.
 
 The product's two pillars:
 
@@ -133,11 +133,11 @@ The app fully supports dark mode (white-on-black "inverted atelier": `--primary:
 > Each section lists: purpose, copy, and the placeholder asset(s) needed.
 
 ### 5.1 Sticky Nav (glassmorphic)
-- Left: **Receeva** wordmark + logo placeholder.
+- Left: **LedgerBest** wordmark + logo placeholder.
 - Center (desktop): anchor links — `Features` · `Currencies` · `Privacy` · `FAQ`.
 - Right: small **Download** button (pill, solid black).
 - Background: `--glass-bg` + `backdrop-blur(20px)`, no bottom border (use a faint `--separator` only if needed).
-- **Asset:** `assets/logo-placeholder.svg` (text "RECEEVA" inside a square is fine).
+- **Asset:** `assets/logo-placeholder.svg` (text "LEDGERBEST" inside a square is fine).
 
 ### 5.2 Hero
 - **Eyebrow:** `PERSONAL FINANCE · MULTI-CURRENCY`
@@ -193,7 +193,7 @@ Section background `--surface-low` (`#f2f4f7`); cards `--surface-lowest` (`#ffff
 ### 5.8 Privacy / Trust section (consider a dark "inverted atelier" block)
 - Eyebrow: `PRIVACY BY DEFAULT`
 - Headline: **Your money. Your device.**
-- Body: *Receeva is offline-first. Use it entirely on-device in guest mode, or opt into encrypted cloud sync when you want it. No ads. No data selling. Sign in with Apple or Google only if you choose to.*
+- Body: *LedgerBest is offline-first. Use it entirely on-device in guest mode, or opt into encrypted cloud sync when you want it. No ads. No data selling. Sign in with Apple or Google only if you choose to.*
 - Chips: `Offline-first` · `Apple & Google Sign-In` · `Encrypted sync` · `No ads`
 
 ### 5.9 Languages strip
@@ -217,10 +217,10 @@ Use the app's real FAQ:
 - Background: signature `#000000 → #1a1b20` radial gradient, white text.
 
 ### 5.12 Footer
-- Left: Receeva wordmark + small tagline *"Crafted for the minimalist curator."*
+- Left: LedgerBest wordmark + small tagline *"Crafted for the minimalist curator."*
 - Columns: **Product** (Features, Download) · **Support** (FAQ, Help, Contact) · **Legal** (Privacy Policy, Terms).
 - All links `href="#"` placeholders.
-- Bottom line: `© 2026 Receeva. All rights reserved.`
+- Bottom line: `© 2026 LedgerBest. All rights reserved.`
 - No top border — separate with a tonal shift only.
 
 ---
@@ -231,7 +231,7 @@ Create an `/assets` (or `/public`) folder. Every file is a placeholder to be rep
 
 ```
 assets/
-  logo-placeholder.svg                 # "RECEEVA" wordmark + mark
+  logo-placeholder.svg                 # "LEDGERBEST" wordmark + mark
   favicon-placeholder.png
   hero-phone-placeholder.png           # Ledger screen mockup (portrait)
   feature-ledger-placeholder.png       # Customer detail
@@ -248,8 +248,8 @@ assets/
 
 ## 7. SEO / Meta
 
-- `<title>`: **Receeva — Track money with anyone, in any currency**
-- `meta description`: *Receeva is an offline-first, multi-currency personal finance & ledger app. Track money sent and received with anyone, see net balances, and convert with live rates. iOS & Android. No ads.*
+- `<title>`: **LedgerBest — Track money with anyone, in any currency**
+- `meta description`: *LedgerBest is an offline-first, multi-currency personal finance & ledger app. Track money sent and received with anyone, see net balances, and convert with live rates. iOS & Android. No ads.*
 - Open Graph + Twitter card using `og-image-placeholder.png`.
 - `theme-color`: `#000000`.
 - Semantic HTML, alt text on every image, `lang` attribute, RTL-aware if a language switcher is added (not required for v1).

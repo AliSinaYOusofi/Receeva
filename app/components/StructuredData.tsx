@@ -2,10 +2,10 @@ import { getTranslations } from "next-intl/server";
 import { faqKeys } from "./faqData";
 import type { Locale } from "@/i18n/routing";
 
-const SITE_URL = "https://receeva.app";
+const SITE_URL = "https://ledgerbest.app";
 
 /**
- * Schema.org JSON-LD. This is what makes Google treat "Receeva" as a named
+ * Schema.org JSON-LD. This is what makes Google treat "LedgerBest" as a named
  * entity rather than a generic string — strengthening the brand-name ranking,
  * enabling a richer SERP listing, and making the FAQ eligible for rich results.
  *
@@ -25,11 +25,11 @@ export async function StructuredData({ locale }: { locale: Locale }) {
       {
         "@type": "Organization",
         "@id": `${SITE_URL}/#organization`,
-        name: "Receeva",
+        name: "LedgerBest",
         url: SITE_URL,
         logo: {
           "@type": "ImageObject",
-          url: `${SITE_URL}/images/logo.png`,
+          url: `${SITE_URL}/images/LedgerBest-iOS-Icon-1024.png`,
         },
         description: t("description"),
       },
@@ -37,7 +37,7 @@ export async function StructuredData({ locale }: { locale: Locale }) {
         "@type": "WebSite",
         "@id": `${SITE_URL}/#website`,
         url,
-        name: "Receeva",
+        name: "LedgerBest",
         description: t("description"),
         publisher: { "@id": `${SITE_URL}/#organization` },
         inLanguage: locale,
@@ -45,7 +45,7 @@ export async function StructuredData({ locale }: { locale: Locale }) {
       {
         "@type": "SoftwareApplication",
         "@id": `${SITE_URL}/#app`,
-        name: "Receeva",
+        name: "LedgerBest",
         applicationCategory: "FinanceApplication",
         operatingSystem: "iOS, Android",
         description: t("description"),

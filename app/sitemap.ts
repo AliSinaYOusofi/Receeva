@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { routing } from "@/i18n/routing";
 
-const SITE_URL = "https://receeva.app";
+const SITE_URL = "https://ledgerbest.app";
 
 function languageAlternates(path: string) {
   return Object.fromEntries(

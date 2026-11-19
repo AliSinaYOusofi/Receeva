@@ -28,7 +28,7 @@ export async function generateMetadata({
       canonical: `/${locale}/privacy`,
     },
     openGraph: {
-      title: `${t("title")} · Receeva`,
+      title: `${t("title")} · LedgerBest`,
       description: t("description"),
       url: `/${locale}/privacy`,
       type: "article",

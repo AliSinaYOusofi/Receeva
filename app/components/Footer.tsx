@@ -37,7 +37,7 @@ export function Footer() {
             <div className="flex items-center gap-2.5">
               {/* eslint-disable-next-line @next/next/no-img-element */}
               <img
-                src="/images/logo.png"
+                src="/images/LedgerBest-iOS-Icon-1024.png"
                 alt=""
                 width={28}
                 height={28}
@@ -45,7 +45,7 @@ export function Footer() {
                 aria-hidden="true"
               />
               <span className="text-lg font-semibold tracking-[-0.02em] text-text">
-                Receeva
+                LedgerBest
               </span>
             </div>
             <p className="mt-4 max-w-[16rem] text-sm leading-relaxed text-text-muted">
